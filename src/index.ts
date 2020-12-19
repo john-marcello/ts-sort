@@ -1,7 +1,10 @@
-console.log('word up my bitches, rock on');
+import { Sorter } from './Sorter';
+import { NumbersCollection } from './NumbersCollection';
 
-const logSomething = function () {
-    console.log('something');
-}
+const numbersCollection = new NumbersCollection(
+    [10, 3, -5, 0]
+);
 
-logSomething();
+const sorter = new Sorter (numbersCollection);
+sorter.sort();
+console.log(numbersCollection.data);
